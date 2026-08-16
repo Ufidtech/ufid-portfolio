@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Danjuma — Frontend & Full-Stack Developer</title>
+<style>
+  :root {
+    --ink: #16181C;
+    --paper: #F6F3EC;
+    --paper-dim: #EDE8DC;
+    --tomato: #C0392B;
+    --tomato-dim: #A5321F;
+    --line: #D9D2C2;
+    --mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  ::selection { background: var(--tomato); color: var(--paper); }
+
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---- Header / Hero ---- */
+  header {
+    padding: 72px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tomato);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px; height: 8px;
+    background: var(--tomato);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .role {
+    font-size: 1.15rem;
+    color: #4B4E54;
+    margin-top: 14px;
+    max-width: 46ch;
+  }
+  .links {
+    margin-top: 28px;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 14px;
+  }
+  .links a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+    transition: border-color .15s, color .15s;
+  }
+  .links a:hover { color: var(--tomato); border-color: var(--tomato); }
+  .links a:focus-visible { outline: 2px solid var(--tomato); outline-offset: 4px; }
+
+  /* ---- Section shared ---- */
+  section { padding: 52px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8A8D93;
+    margin-bottom: 28px;
+  }
+
+  /* ---- Projects ---- */
+  .project {
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+  .project:first-of-type { border-top: none; padding-top: 0; }
+  .project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .project-name { font-size: 1.3rem; font-weight: 700; }
+  .project-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--tomato-dim);
+    background: rgba(192,57,43,0.08);
+    padding: 3px 9px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .project-desc { margin-top: 10px; color: #3D3F44; max-width: 62ch; }
+  .project-meta {
+    margin-top: 14px;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: #6B6E74;
+  }
+  .project-links { margin-top: 14px; display: flex; gap: 16px; font-size: 14px; }
+  .project-links a {
+    text-decoration: none;
+    color: var(--tomato-dim);
+    font-weight: 600;
+  }
+  .project-links a:hover { text-decoration: underline; }
+
+  /* ---- Competitions / Leadership ---- */
+  ul.plain { list-style: none; }
+  ul.plain li {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+  ul.plain li:first-child { border-top: none; }
+  .badge {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 2px 8px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  footer {
+    padding: 40px 0 64px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: #8A8D93;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer a { color: var(--tomato-dim); text-decoration: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Minna, Nigeria — Open to Summer 2027 internships</div>
+    <h1>Ibrahim Danjuma</h1>
+    <p class="role">Frontend &amp; full-stack developer building real tools for real problems — from agtech dashboards to campus community platforms.</p>
+    <div class="links">
+      <a href="https://github.com/Ufidtech" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/danjuma-ibrahim/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:ufidfarooq@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <div class="section-label">Selected Work</div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">Tazemi</span>
+        <span class="project-tag">React · FastAPI · Firebase</span>
+      </div>
+      <p class="project-desc">Agtech startup fighting post-harvest tomato loss in Nigeria. I own and maintain the frontend implementation — a public marketing site, an executive analytics dashboard, and role-based UI translating distinct CEO and field-operator workflows into one coherent interface.</p>
+      <p class="project-meta">Nov 2025 — Present · Early-stage / validation phase · CEO actively uses the executive dashboard for day-to-day oversight</p>
+      <div class="project-links">
+        <a href="https://tazemi.vercel.app/" target="_blank" rel="noopener">View live site →</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">OnboardX</span>
+        <span class="project-tag">React · Node.js · Azure AI · Firebase</span>
+      </div>
+      <p class="project-desc">AI-powered community onboarding and mentorship-matching platform. Built full-stack, integrating Azure AI to power a capacity-aware mentor-matching engine — using a validated-ID lookup pattern so the model can never hallucinate an unverified mentor assignment.</p>
+      <p class="project-meta">2026 · Personal project · Backend architecture informed by the 3MTT Software Development Fellowship</p>
+      <div class="project-links">
+        <a href="https://github.com/Ufidtech/onboardx" target="_blank" rel="noopener">View repo →</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">Gravio</span>
+        <span class="project-tag">Vanilla JS · HTML · CSS</span>
+      </div>
+      <p class="project-desc">A CGPA planning tool for Nigerian university students, built on one observation: most tools tell you where you stand, not what to do next. A live GPA calculator, a target-class planner using a weighted quality-points formula, and a commitment-tracking feature that locks in academic goals for the semester.</p>
+      <p class="project-meta">Feb 2026 · Personal project · No frameworks, local storage, JSON export of full academic history</p>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <span class="project-name">OnboardX-Gemma</span>
+        <span class="project-tag">Gemma 4 · Function Calling</span>
+      </div>
+      <p class="project-desc">Built for the "Build with Gemma: AI for Africa" hackathon (GDG on Campus, FUTMinna). Uses Gemma 4's native function calling to build a genuine agent loop — the model decides when it needs live mentor-capacity data, calls a real function, and responds based on the result.</p>
+      <p class="project-meta">2026 · Hackathon submission</p>
+      <div class="project-links">
+        <a href="https://github.com/Ufidtech/onboardx-gemma" target="_blank" rel="noopener">View repo →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitions">
+    <div class="section-label">Competitions &amp; Recognition</div>
+    <ul class="plain">
+      <li><span class="badge">FINALIST</span> USAII Global Hackathon — awarded certificate of finalist</li>
+      <li><span class="badge">VOLUNTEER</span> Coordinator, USAII Global Hackathon — supported event coordination alongside competing</li>
+    </ul>
+  </section>
+
+  <section id="leadership">
+    <div class="section-label">Leadership &amp; Community</div>
+    <ul class="plain">
+      <li><span class="badge">MLSA</span> Microsoft Learn Student Ambassador (Associate) — guiding students on campus in building skills with Microsoft technologies</li>
+      <li><span class="badge">GDGoC</span> Core Team Member, GDG on Campus FUTMinna — planning high-impact community events and workshops</li>
+      <li><span class="badge">NOTION</span> Campus Lead — teaching students to use Notion for coursework, school life, and career planning</li>
+      <li><span class="badge">AWS</span> Volunteer, AWS Student Community Day 2026</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>Built by Ibrahim Danjuma, Minna, Nigeria</span>
+    <a href="mailto:ufidfarooq@gmail.com">ufidfarooq@gmail.com</a>
+  </footer>
+</div>
+
+</body>
+</html>
